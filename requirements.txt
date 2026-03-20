@@ -1,8 +1,7 @@
 requests
 beautifulsoup4
-newspaper3k
-lxml-html-clean
 pandas
 schedule
 textblob
 python-dotenv
+lxml-html-clean

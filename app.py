@@ -1,7 +1,6 @@
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
-from newspaper import Article
 import pandas as pd
 from datetime import datetime
 import time
@@ -17,6 +16,7 @@ import re
 # ─────────────────────────────────────────────
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+
 NEWS_SOURCES = [
     {"name": "BBC Business",       "rss": "http://feeds.bbci.co.uk/news/business/rss.xml"},
     {"name": "Yahoo Finance",      "rss": "https://finance.yahoo.com/news/rssindex"},
@@ -60,14 +60,6 @@ def get_article_links(rss_url, max_articles=5):
         return []
 
 def extract_article_text(url):
-    try:
-        article = Article(url)
-        article.download()
-        article.parse()
-        if article.text and len(article.text) > 100:
-            return article.text[:3000]
-    except:
-        pass
     try:
         headers = {"User-Agent": "Mozilla/5.0"}
         r = requests.get(url, headers=headers, timeout=10)
@@ -214,7 +206,7 @@ with st.sidebar:
         schedule.clear()
         st.caption("Auto-fetch is off")
     st.divider()
-    st.caption("Built by K Arukshithaaw")
+    st.caption("Built by Arukshithaa W")
     st.caption("Python • Streamlit • Groq AI")
 
 tab1, tab2, tab3, tab4 = st.tabs(["📰 Today's News", "📊 Analytics", "🗄️ Database", "🗑️ Manage"])
