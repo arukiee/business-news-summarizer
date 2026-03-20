@@ -1,7 +1,9 @@
 requests
 beautifulsoup4
 newspaper3k
-pandas
-lxml
 lxml_html_clean
+pandas
+streamlit
 schedule
+textblob
+python-dotenv
