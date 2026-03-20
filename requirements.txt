@@ -4,3 +4,4 @@ newspaper3k
 pandas
 lxml
 lxml_html_clean
+schedule
