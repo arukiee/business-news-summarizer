@@ -206,7 +206,7 @@ with st.sidebar:
         schedule.clear()
         st.caption("Auto-fetch is off")
     st.divider()
-    st.caption("Built by Arukshithaa W")
+    st.caption("Built by K Arukshithaaw")
     st.caption("Python • Streamlit • Groq AI")
 
 tab1, tab2, tab3, tab4 = st.tabs(["📰 Today's News", "📊 Analytics", "🗄️ Database", "🗑️ Manage"])
